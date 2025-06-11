@@ -13,4 +13,7 @@ public interface SuperheroApiClient {
 
     @GetMapping(value = "/no-of-villains", produces = MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<BatmanResponse> noOfVillains(@RequestParam("value") Integer value);
+
+    @PostMapping(value = "/no-of-heros",produces = MediaType.APPLICATION_JSON_VALUE)
+    ResponseEntity<BatmanResponse> noOfHeros(@RequestParam("value") Integer value);
 }

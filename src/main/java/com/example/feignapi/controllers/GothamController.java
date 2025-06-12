@@ -19,4 +19,9 @@ public final class GothamController implements SuperheroApiClient {
     public ResponseEntity<BatmanResponse> noOfVillains(Integer value) {
       return ResponseEntity.ok(new BatmanResponse("Batman has received count of villains: " + value));
     }
+
+    @Override
+    public ResponseEntity<BatmanResponse> customMessage(String messageBody){
+        return ResponseEntity.ok(new BatmanResponse("Batman has received the following message : " + messageBody));
+    }
 }

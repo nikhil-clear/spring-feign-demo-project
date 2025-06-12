@@ -29,5 +29,8 @@ public class Main {
 
         ResponseEntity<BatmanResponse> messageResponse = client.noOfVillains(5);
         System.out.println(messageResponse.getBody());
+
+        ResponseEntity<BatmanResponse> customMessage = client.customMessage("HGDEuy");
+        System.out.println(customMessage.getBody());
     }
 }
